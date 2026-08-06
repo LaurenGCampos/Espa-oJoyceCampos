@@ -194,3 +194,187 @@ body {
 .catalog-card-item.hidden-card {
   display: none !important;
 }
+
+/* Light Theme (White Mode) Configuration */
+[data-theme="light"] {
+  --bg-primary: #FAF9F6;
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F5F4F0;
+  
+  --gold-primary: #C59B27;
+  --gold-light: #B8860B;
+  --gold-dark: #8B6508;
+  
+  --text-main: #1C1917;
+  --text-muted: #44403C;
+  --text-dim: #78716C;
+  
+  --border-gold: rgba(197, 155, 39, 0.4);
+  --border-subtle: rgba(0, 0, 0, 0.1);
+
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+/* Glass Nav Light Mode */
+[data-theme="light"] .glass-nav {
+  background: rgba(255, 255, 255, 0.92);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] #mobile-menu {
+  background: #FFFFFF !important;
+  border-color: #E7E5E4 !important;
+}
+
+/* Hardcoded hex color overrides for light mode */
+[data-theme="light"] .bg-\[\#121215\] {
+  background-color: var(--bg-primary) !important;
+}
+
+[data-theme="light"] .bg-\[\#1A1A1F\] {
+  background-color: var(--bg-secondary) !important;
+}
+
+[data-theme="light"] .bg-\[\#23232A\] {
+  background-color: var(--bg-card) !important;
+}
+
+[data-theme="light"] .bg-\[\#0F0F12\] {
+  background-color: #F3F4F6 !important;
+}
+
+[data-theme="light"] .bg-\[\#1F1F24\] {
+  background-color: #FAFAFA !important;
+}
+
+/* Text color overrides for light mode */
+[data-theme="light"] .text-white {
+  color: #1C1917 !important;
+}
+
+[data-theme="light"] .text-gray-100 {
+  color: #1C1917 !important;
+}
+
+[data-theme="light"] .text-gray-200 {
+  color: #292524 !important;
+}
+
+[data-theme="light"] .text-gray-300 {
+  color: #44403C !important;
+}
+
+[data-theme="light"] .text-gray-400 {
+  color: #57534E !important;
+}
+
+[data-theme="light"] .text-gray-500 {
+  color: #78716C !important;
+}
+
+/* Border overrides for light mode */
+[data-theme="light"] .border-gray-800 {
+  border-color: #E7E5E4 !important;
+}
+
+[data-theme="light"] .border-gray-700,
+[data-theme="light"] .border-gray-700\/60 {
+  border-color: #E7E5E4 !important;
+}
+
+/* Card & Badge overrides for light mode */
+[data-theme="light"] .badge-gray {
+  background: #F5F4F0;
+  border-color: rgba(197, 155, 39, 0.4);
+  color: #9A7209;
+}
+
+[data-theme="light"] .btn-gold {
+  background-color: var(--gold-primary);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(197, 155, 39, 0.25);
+}
+
+[data-theme="light"] .btn-gold:hover {
+  background-color: var(--gold-light);
+  box-shadow: 0 6px 20px rgba(197, 155, 39, 0.35);
+}
+
+[data-theme="light"] .btn-gold-outline {
+  background: #FFFFFF;
+  color: var(--gold-light);
+  border: 1px solid var(--border-gold);
+}
+
+[data-theme="light"] .btn-gold-outline:hover {
+  background: #FAF9F6;
+  color: #1C1917;
+  border-color: var(--gold-primary);
+}
+
+[data-theme="light"] .filter-tab {
+  background: #FFFFFF;
+  color: #57534E;
+  border: 1px solid #E7E5E4;
+}
+
+[data-theme="light"] .filter-tab.active,
+[data-theme="light"] .filter-tab:hover {
+  background: rgba(197, 155, 39, 0.12);
+  color: #9A7209;
+  border-color: var(--gold-primary);
+}
+
+[data-theme="light"] .service-card {
+  background-color: #FFFFFF;
+  border: 1px solid #E7E5E4;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="light"] .service-card:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(197, 155, 39, 0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+[data-theme="light"] .accordion-header:hover {
+  background-color: #F5F4F0;
+}
+
+/* Theme Toggle Button Styling */
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--gold-light);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  user-select: none;
+}
+
+.theme-toggle-btn:hover {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold-primary);
+  transform: scale(1.05);
+}
+
+[data-theme="light"] .theme-toggle-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  color: #9A7209;
+}
+
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: rgba(197, 155, 39, 0.15);
+  border-color: var(--gold-primary);
+}
+
