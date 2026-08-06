@@ -2,7 +2,7 @@
 
 :root {
   --bg-primary: #121215;
-  --bg-secondary: #1A1A1F;
+  --bg-secondary: #121215;
   --bg-card: #23232A;
   --bg-card-hover: #2C2C35;
   
@@ -38,10 +38,15 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
   color: var(--text-main);
   overflow-x: hidden;
+}
+
+section {
+  scroll-margin-top: 6rem;
 }
 
 body {
@@ -198,7 +203,7 @@ body {
 /* Light Theme (White Mode) Configuration */
 [data-theme="light"] {
   --bg-primary: #FAF9F6;
-  --bg-secondary: #FFFFFF;
+  --bg-secondary: #FAF9F6;
   --bg-card: #FFFFFF;
   --bg-card-hover: #F5F4F0;
   
