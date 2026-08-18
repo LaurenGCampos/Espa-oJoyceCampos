@@ -58,7 +58,7 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .card-cta:hover::after { transform:translateX(4px); }
 .salon-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
 .salon-grid.is-filtered { grid-template-columns:1fr; }
-.salon-card { padding:clamp(24px,4vw,38px); border:1px solid var(--line); border-radius:24px; background:linear-gradient(145deg,rgba(27,23,16,.96),rgba(8,8,7,.98)); box-shadow:0 24px 60px rgba(0,0,0,.2); scroll-margin-top:96px; }
+.salon-card { display:flex; flex-direction:column; padding:clamp(24px,4vw,38px); border:1px solid var(--line); border-radius:24px; background:linear-gradient(145deg,rgba(27,23,16,.96),rgba(8,8,7,.98)); box-shadow:0 24px 60px rgba(0,0,0,.2); scroll-margin-top:96px; }
 .salon-card-wide { grid-column:1/-1; }
 .salon-card-heading { display:flex; align-items:flex-start; gap:16px; margin-bottom:24px; }
 .salon-card-heading>span { flex:0 0 auto; color:var(--gold); font:600 1.35rem "Cormorant Garamond",serif; }
@@ -77,6 +77,7 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .package-list small { display:block; margin-top:4px; color:#887a5a; font-size:.72rem; }
 .package-list strong { flex:0 0 auto; color:var(--gold-light); }
 .card-note { margin:24px 0 0; padding:14px 16px; border-left:2px solid var(--gold); color:#a99a76; background:rgba(201,155,74,.05); font-size:.82rem; line-height:1.55; }
+.salon-card-cta { margin-top:auto; padding-top:24px; }
 .chemical-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
 .chemical-service { position:relative; padding:24px; border:1px solid rgba(201,155,74,.2); border-radius:18px; background:rgba(0,0,0,.2); }
 .chemical-service h4 { margin:0 0 20px; color:#fff0ca; font:600 1.55rem "Cormorant Garamond",serif; }
