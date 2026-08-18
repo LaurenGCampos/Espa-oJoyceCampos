@@ -4,13 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="Catálogo de tranças do Espaço Joyce Campos em Sarapuí, SP. Conheça modelos, valores e agende pelo WhatsApp.">
+  <meta name="description" content="Catálogo de tranças e serviços de salão do Espaço Joyce Campos em Sarapuí, SP. Conheça os valores e agende pelo WhatsApp.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Catálogo de tranças · Espaço Joyce Campos">
-  <meta property="og:description" content="Escolha seu estilo e agende com a Joyce.">
+  <meta property="og:title" content="Catálogo de serviços · Espaço Joyce Campos">
+  <meta property="og:description" content="Tranças, cortes, tratamentos, coloração e químicas. Escolha seu serviço e agende com a Joyce.">
   <meta property="og:image" content="https://espaco-joyce-campos.vercel.app/assets/images/og-links.png">
-  <title>Catálogo de tranças · Espaço Joyce Campos</title>
+  <title>Catálogo de serviços · Espaço Joyce Campos</title>
   <link rel="icon" href="/assets/images/logo-joyce.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,10 +29,13 @@
   <main>
     <section class="hero" aria-labelledby="catalogo-title">
       <div class="hero-copy">
-        <p class="eyebrow">Tranças que contam histórias</p>
-        <h1 id="catalogo-title">Encontre o estilo que combina com você.</h1>
-        <p>Conheça os modelos, compare os valores e fale com a Joyce para confirmar cores, materiais e disponibilidade.</p>
-        <a class="button button-primary" href="#servicos">Ver os 37 serviços</a>
+        <p class="eyebrow">Beleza, cuidado e identidade</p>
+        <h1 id="catalogo-title">Encontre o cuidado que combina com você.</h1>
+        <p>Conheça as tranças e os serviços de salão, compare os valores e fale com a Joyce para confirmar os detalhes e a disponibilidade.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#servicos">Ver tranças</a>
+          <a class="button button-secondary" href="#servicos-salao">Outros serviços</a>
+        </div>
       </div>
       <div class="hero-image" aria-hidden="true">
         <img src="/assets/images/catalogo-ai/goddess-m-com-cachos.webp" alt="" width="900" height="900">
@@ -42,8 +45,8 @@
     <section class="catalog-section" id="servicos" aria-labelledby="servicos-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Catálogo completo</p>
-          <h2 id="servicos-title">Escolha por categoria</h2>
+          <p class="eyebrow">Catálogo de tranças</p>
+          <h2 id="servicos-title">Escolha sua trança por categoria</h2>
         </div>
         <p><span id="result-count">37</span> opções disponíveis</p>
       </div>
@@ -53,14 +56,109 @@
       <div class="services-grid" id="services-grid" aria-live="polite"></div>
     </section>
 
+    <section class="salon-section" id="servicos-salao" aria-labelledby="salao-title">
+      <div class="section-heading salon-heading">
+        <div>
+          <p class="eyebrow">Além das tranças</p>
+          <h2 id="salao-title">Serviços de salão</h2>
+        </div>
+        <p>Valores organizados por categoria</p>
+      </div>
+
+      <div class="salon-grid">
+        <article class="salon-card">
+          <div class="salon-card-heading"><span>01</span><div><p>Saúde dos fios</p><h3>Tratamentos capilares</h3></div></div>
+          <p class="service-description">Hidratação, nutrição ou reconstrução conforme a necessidade do cabelo.</p>
+          <ul class="price-list">
+            <li><span>Curto</span><strong>R$ 65</strong></li>
+            <li><span>Médio</span><strong>R$ 70</strong></li>
+            <li><span>Longo</span><strong>R$ 80</strong></li>
+            <li><span>Extra longo</span><strong>R$ 100</strong></li>
+          </ul>
+          <div class="package-list">
+            <p><span>Cronograma capilar<small>4 escovas + 4 hidratações</small></span><strong>R$ 230</strong></p>
+            <p><span>Pacote de hidratação<small>4 escovas + 2 hidratações</small></span><strong>R$ 180</strong></p>
+          </div>
+        </article>
+
+        <article class="salon-card">
+          <div class="salon-card-heading"><span>02</span><div><p>Acabamento</p><h3>Escovas e finalização</h3></div></div>
+          <ul class="price-list price-list-spaced">
+            <li><span>Escova<small>Chapinha opcional</small></span><strong>R$ 40</strong></li>
+            <li><span>Escova + chapinha</span><strong>R$ 50</strong></li>
+            <li><span>Escova + babyliss</span><strong>R$ 50</strong></li>
+          </ul>
+        </article>
+
+        <article class="salon-card">
+          <div class="salon-card-heading"><span>03</span><div><p>Renove o visual</p><h3>Cortes e penteados</h3></div></div>
+          <ul class="price-list price-list-spaced">
+            <li><span>Corte</span><strong>R$ 45</strong></li>
+            <li><span>Escova + corte</span><strong>R$ 75</strong></li>
+            <li><span>Escova + corte + hidratação</span><strong>R$ 120</strong></li>
+            <li><span>Penteados</span><strong>A partir de R$ 80</strong></li>
+          </ul>
+        </article>
+
+        <article class="salon-card">
+          <div class="salon-card-heading"><span>04</span><div><p>Uma nova cor</p><h3>Coloração</h3></div></div>
+          <ul class="price-list price-list-spaced">
+            <li><span>Aplicação simples<small>Cliente traz a tinta</small></span><strong>R$ 45</strong></li>
+            <li><span>Com a tinta do salão</span><strong>A partir de R$ 90</strong></li>
+          </ul>
+          <p class="card-note">O valor da coloração do salão varia conforme a quantidade de tubos utilizados.</p>
+        </article>
+
+        <article class="salon-card salon-card-wide">
+          <div class="salon-card-heading"><span>05</span><div><p>Alinhamento e redução de volume</p><h3>Químicas</h3></div></div>
+          <div class="chemical-grid">
+            <div class="chemical-service">
+              <h4>Definitiva</h4>
+              <ul class="price-list">
+                <li><span>Curto</span><strong>R$ 150</strong></li>
+                <li><span>Médio</span><strong>R$ 180</strong></li>
+                <li><span>Longo</span><strong>R$ 230</strong></li>
+                <li><span>Extra longo</span><strong>R$ 280</strong></li>
+              </ul>
+            </div>
+            <div class="chemical-service">
+              <h4>Botox capilar</h4>
+              <ul class="price-list">
+                <li><span>Curto</span><strong>R$ 60</strong></li>
+                <li><span>Médio</span><strong>R$ 70</strong></li>
+                <li><span>Longo</span><strong>R$ 80</strong></li>
+                <li><span>Extra longo</span><strong>R$ 90</strong></li>
+              </ul>
+            </div>
+            <div class="chemical-service featured-chemical">
+              <span class="safe-label">Sem formol</span>
+              <h4>Progressiva</h4>
+              <ul class="price-list">
+                <li><span>Curto</span><strong>R$ 110</strong></li>
+                <li><span>Médio</span><strong>R$ 130</strong></li>
+                <li><span>Longo</span><strong>R$ 160</strong></li>
+                <li><span>Extra longo</span><strong>R$ 180</strong></li>
+              </ul>
+            </div>
+          </div>
+          <p class="safety-note"><strong>Avaliação necessária:</strong> procedimentos químicos são realizados somente com produtos regularizados pela Anvisa. O valor pode variar conforme o comprimento, o volume e a condição dos fios.</p>
+        </article>
+      </div>
+
+      <div class="salon-cta">
+        <div><p class="eyebrow">Ficou com alguma dúvida?</p><h3>Converse com a Joyce antes de agendar.</h3></div>
+        <a class="button button-primary" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20os%20serviços%20de%20salão%20no%20catálogo%20e%20quero%20mais%20informações." target="_blank" rel="noopener">Consultar pelo WhatsApp</a>
+      </div>
+    </section>
+
     <section class="booking" id="agendamento" aria-labelledby="booking-title">
       <div>
         <p class="eyebrow">Seu horário, do seu jeito</p>
         <h2 id="booking-title">Como agendar</h2>
-        <p>Escolha o modelo e envie pelo WhatsApp. A Joyce confirma a disponibilidade, o material e o valor final antes do atendimento.</p>
+        <p>Escolha a trança ou o serviço e envie pelo WhatsApp. A Joyce confirma a disponibilidade, os detalhes e o valor final antes do atendimento.</p>
       </div>
       <ol class="booking-steps">
-        <li><span>01</span><div><strong>Escolha</strong><p>Toque em “Quero este estilo” no serviço desejado.</p></div></li>
+        <li><span>01</span><div><strong>Escolha</strong><p>Selecione a trança ou o serviço desejado.</p></div></li>
         <li><span>02</span><div><strong>Combine</strong><p>Informe a data, o tamanho, a cor e envie uma foto do cabelo.</p></div></li>
         <li><span>03</span><div><strong>Confirme</strong><p>Aguarde a Joyce confirmar o horário e as condições.</p></div></li>
       </ol>
