@@ -78,3 +78,47 @@ filters.addEventListener("click", (event) => {
   });
   resultCount.textContent = visible;
 });
+
+const catalogNav = document.querySelector(".catalog-nav");
+const catalogPanels = [...document.querySelectorAll("[data-catalog-panel]")];
+const salonGrid = document.querySelector(".salon-grid");
+const catalogCategories = new Set(catalogPanels.map((panel) => panel.dataset.catalogPanel));
+
+const showCatalogCategory = (requestedCategory, updateUrl = false) => {
+  const category = catalogCategories.has(requestedCategory) ? requestedCategory : "todos";
+
+  catalogPanels.forEach((panel) => {
+    panel.hidden = category !== "todos" && panel.dataset.catalogPanel !== category;
+  });
+
+  const hasVisibleSalonService = catalogPanels.some((panel) =>
+    panel.closest(".salon-grid") && !panel.hidden
+  );
+  salonGrid.hidden = !hasVisibleSalonService;
+  salonGrid.classList.toggle("is-filtered", category !== "todos");
+
+  catalogNav.querySelectorAll("[data-catalog-category]").forEach((link) => {
+    const active = link.dataset.catalogCategory === category;
+    link.classList.toggle("is-active", active);
+    if (active) link.setAttribute("aria-current", "true");
+    else link.removeAttribute("aria-current");
+  });
+
+  if (updateUrl) {
+    const hash = category === "todos" ? "#catalogo" : `#${category}`;
+    history.pushState({ catalogCategory: category }, "", hash);
+  }
+};
+
+catalogNav.addEventListener("click", (event) => {
+  const link = event.target.closest("[data-catalog-category]");
+  if (!link) return;
+  event.preventDefault();
+  showCatalogCategory(link.dataset.catalogCategory, true);
+});
+
+window.addEventListener("hashchange", () => {
+  showCatalogCategory(location.hash.slice(1));
+});
+
+showCatalogCategory(location.hash.slice(1));

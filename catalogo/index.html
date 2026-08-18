@@ -49,16 +49,17 @@
       </div>
 
       <nav class="catalog-nav" aria-label="Categorias do catálogo">
-        <a href="#tratamentos"><span>01</span>Tratamentos</a>
-        <a href="#escovas"><span>02</span>Escovas</a>
-        <a href="#cortes"><span>03</span>Cortes e penteados</a>
-        <a href="#coloracao"><span>04</span>Coloração</a>
-        <a href="#quimicas"><span>05</span>Químicas</a>
-        <a href="#trancas"><span>06</span>Tranças</a>
+        <a class="is-active" href="#catalogo" data-catalog-category="todos" aria-current="true"><span>00</span>Todos</a>
+        <a href="#tratamentos" data-catalog-category="tratamentos"><span>01</span>Tratamentos</a>
+        <a href="#escovas" data-catalog-category="escovas"><span>02</span>Escovas</a>
+        <a href="#cortes" data-catalog-category="cortes"><span>03</span>Cortes e penteados</a>
+        <a href="#coloracao" data-catalog-category="coloracao"><span>04</span>Coloração</a>
+        <a href="#quimicas" data-catalog-category="quimicas"><span>05</span>Químicas</a>
+        <a href="#trancas" data-catalog-category="trancas"><span>06</span>Tranças</a>
       </nav>
 
       <div class="salon-grid">
-        <article class="salon-card" id="tratamentos">
+        <article class="salon-card" id="tratamentos" data-catalog-panel="tratamentos">
           <div class="salon-card-heading"><span>01</span><div><p>Saúde dos fios</p><h3>Tratamentos capilares</h3></div></div>
           <p class="service-description">Hidratação, nutrição ou reconstrução conforme a necessidade do cabelo.</p>
           <ul class="price-list">
@@ -73,7 +74,7 @@
           </div>
         </article>
 
-        <article class="salon-card" id="escovas">
+        <article class="salon-card" id="escovas" data-catalog-panel="escovas">
           <div class="salon-card-heading"><span>02</span><div><p>Acabamento</p><h3>Escovas e finalização</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Escova<small>Chapinha opcional</small></span><strong>R$ 40</strong></li>
@@ -82,7 +83,7 @@
           </ul>
         </article>
 
-        <article class="salon-card" id="cortes">
+        <article class="salon-card" id="cortes" data-catalog-panel="cortes">
           <div class="salon-card-heading"><span>03</span><div><p>Renove o visual</p><h3>Cortes e penteados</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Corte</span><strong>R$ 45</strong></li>
@@ -92,7 +93,7 @@
           </ul>
         </article>
 
-        <article class="salon-card" id="coloracao">
+        <article class="salon-card" id="coloracao" data-catalog-panel="coloracao">
           <div class="salon-card-heading"><span>04</span><div><p>Uma nova cor</p><h3>Coloração</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Aplicação simples<small>Cliente traz a tinta</small></span><strong>R$ 45</strong></li>
@@ -101,7 +102,7 @@
           <p class="card-note">O valor da coloração do salão varia conforme a quantidade de tubos utilizados.</p>
         </article>
 
-        <article class="salon-card salon-card-wide" id="quimicas">
+        <article class="salon-card salon-card-wide" id="quimicas" data-catalog-panel="quimicas">
           <div class="salon-card-heading"><span>05</span><div><p>Alinhamento e redução de volume</p><h3>Químicas</h3></div></div>
           <div class="chemical-grid">
             <div class="chemical-service">
@@ -137,7 +138,7 @@
         </article>
       </div>
 
-      <div class="braids-category" id="trancas">
+      <div class="braids-category" id="trancas" data-catalog-panel="trancas">
         <div class="category-heading">
           <div>
             <p class="eyebrow">Categoria 06</p>
