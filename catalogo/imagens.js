@@ -39,4 +39,3 @@ const photoSources = {
 };
 
 const commonsImageUrl = (fileName) => `https://commons.wikimedia.org/wiki/Special:Redirect/file/${encodeURIComponent(fileName)}?width=900`;
-const commonsSourceUrl = (fileName) => `https://commons.wikimedia.org/wiki/File:${encodeURIComponent(fileName)}`;
