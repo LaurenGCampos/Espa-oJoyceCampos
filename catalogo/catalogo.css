@@ -72,10 +72,6 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .price-list li>strong { order:3; flex:0 0 auto; color:var(--gold-light); text-align:right; }
 .price-list small { display:block; margin-top:3px; color:#877a5c; font-size:.72rem; }
 .price-list-spaced { gap:18px; }
-.package-list { display:grid; gap:10px; margin-top:24px; padding-top:20px; border-top:1px solid rgba(201,155,74,.18); }
-.package-list p { display:flex; justify-content:space-between; gap:18px; margin:0; color:#e0cb96; font-size:.88rem; }
-.package-list small { display:block; margin-top:4px; color:#887a5a; font-size:.72rem; }
-.package-list strong { flex:0 0 auto; color:var(--gold-light); }
 .card-note { margin:24px 0 0; padding:14px 16px; border-left:2px solid var(--gold); color:#a99a76; background:rgba(201,155,74,.05); font-size:.82rem; line-height:1.55; }
 .salon-card-cta { margin-top:auto; padding-top:24px; }
 .chemical-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
@@ -83,8 +79,6 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .chemical-service h4 { margin:0 0 20px; color:#fff0ca; font:600 1.55rem "Cormorant Garamond",serif; }
 .featured-chemical { border-color:var(--gold); background:linear-gradient(145deg,rgba(201,155,74,.13),rgba(0,0,0,.22)); }
 .safe-label { float:right; margin-left:10px; padding:5px 9px; border:1px solid rgba(240,212,138,.45); border-radius:999px; color:var(--gold-light); font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
-.safety-note { margin:22px 0 0; padding:17px 19px; border-radius:14px; color:#b7a77f; background:rgba(201,155,74,.07); font-size:.84rem; line-height:1.6; }
-.safety-note strong { color:var(--gold-light); }
 .braids-category { margin-top:80px; padding-top:62px; border-top:1px solid var(--line); scroll-margin-top:80px; }
 .category-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; }
 .category-heading>p { margin:0; color:var(--muted); }
@@ -137,8 +131,6 @@ noscript { display:block; padding:20px; color:#fff; background:#9b2c2c; text-ali
   .salon-grid { grid-template-columns:1fr; gap:18px; }
   .salon-card-wide { grid-column:auto; }
   .service-description { margin-left:0; }
-  .package-list p { display:block; }
-  .package-list strong { display:block; margin-top:7px; }
   .salon-cta { align-items:stretch; flex-direction:column; }
   .salon-cta .button { width:100%; }
   .braids-category { margin-top:60px; padding-top:48px; }
