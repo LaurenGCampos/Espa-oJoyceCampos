@@ -33,7 +33,7 @@ h3 { margin-bottom:10px; font-size:1.65rem; line-height:1.05; }
 .hero-copy .hero-actions { justify-content:flex-start; }
 .hero-photo { position:relative; width:min(100%,470px); justify-self:end; }
 .hero-photo::before { content:""; position:absolute; inset:-12px; border:1px solid var(--gold); border-radius:50%; opacity:.65; }
-.hero-photo img { position:relative; aspect-ratio:1; width:100%; border-radius:50%; object-fit:cover; filter:saturate(.84) sepia(.06); }
+.hero-photo img { position:relative; aspect-ratio:1; width:100%; border-radius:50%; object-fit:cover; object-position:center 20%; filter:saturate(.9) sepia(.03); }
 .photo-note { position:absolute; right:-16px; bottom:8%; display:grid; place-items:center; width:132px; min-height:132px; padding:18px; border:1px solid var(--gold-light); border-radius:50%; color:var(--ink); background:linear-gradient(135deg,var(--gold-light),var(--gold)); text-align:center; transform:rotate(-7deg); }
 .photo-note strong { font:700 1.2rem/1.05 "Cormorant Garamond",serif; }
 .photo-note small { display:block; margin-top:5px; font-size:.62rem; line-height:1.25; }
