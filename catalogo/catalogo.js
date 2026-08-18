@@ -48,7 +48,7 @@ const serviceMessage = (service) => encodeURIComponent(`Olá, Joyce! Vi no catá
 grid.innerHTML = services.map((service) => `
   <article class="service-card" data-category="${escapeHtml(service.category)}">
     <div class="service-media">
-      <img src="${commonsImageUrl(photoSources[service.image])}" alt="Imagem de referência: ${escapeHtml(service.category)} ${escapeHtml(service.name)}" width="760" height="760" loading="lazy" decoding="async">
+      <img src="/assets/images/catalogo-ai/${service.image}.webp" alt="Imagem ilustrativa: ${escapeHtml(service.category)} ${escapeHtml(service.name)}" width="900" height="900" loading="lazy" decoding="async">
       <span class="service-category">${escapeHtml(service.category)}</span>
     </div>
     <div class="service-content">

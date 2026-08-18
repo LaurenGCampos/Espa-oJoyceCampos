@@ -66,13 +66,6 @@ footer img { margin:0 auto 16px; border-radius:50%; }
 .footer-links { display:flex; flex-wrap:wrap; justify-content:center; gap:10px 22px; margin:20px 0; }
 .footer-links a { color:var(--gold-light); text-decoration:none; }
 footer small { color:#756a51; }
-.credits-page { width:min(900px,calc(100% - 32px)); min-height:70vh; margin:0 auto; padding:70px 0 100px; }
-.credits-page>p:not(.eyebrow) { max-width:700px; color:#c6b58a; line-height:1.7; }
-.credits-list { display:grid; gap:12px; margin-top:38px; }
-.credit-item { padding:18px 20px; border:1px solid var(--line); border-radius:14px; background:rgba(255,255,255,.025); }
-.credit-item strong { display:block; color:var(--gold-light); }
-.credit-item p { margin:7px 0; color:#c8b78c; font-size:.88rem; line-height:1.55; }
-.credit-item a { color:var(--gold); font-size:.82rem; }
 noscript { display:block; padding:20px; color:#fff; background:#9b2c2c; text-align:center; }
 @media (max-width:900px) {
   .hero { min-height:auto; grid-template-columns:1fr; padding:60px 0 80px; }
