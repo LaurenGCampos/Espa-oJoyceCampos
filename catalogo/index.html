@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="Catálogo de tranças e serviços de salão do Espaço Joyce Campos em Sarapuí, SP. Conheça os valores e agende pelo WhatsApp.">
+  <meta name="description" content="Catálogo completo do Espaço Joyce Campos em Sarapuí, SP. Encontre tranças, tratamentos, cortes, coloração, químicas e outros serviços.">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:title" content="Catálogo de serviços · Espaço Joyce Campos">
@@ -32,41 +32,33 @@
         <p class="eyebrow">Beleza, cuidado e identidade</p>
         <h1 id="catalogo-title">Encontre o cuidado que combina com você.</h1>
         <p>Conheça as tranças e os serviços de salão, compare os valores e fale com a Joyce para confirmar os detalhes e a disponibilidade.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#servicos">Ver tranças</a>
-          <a class="button button-secondary" href="#servicos-salao">Outros serviços</a>
-        </div>
+        <a class="button button-primary" href="#catalogo">Ver catálogo completo</a>
       </div>
       <div class="hero-image" aria-hidden="true">
         <img src="/assets/images/catalogo-ai/goddess-m-com-cachos.webp" alt="" width="900" height="900">
       </div>
     </section>
 
-    <section class="catalog-section" id="servicos" aria-labelledby="servicos-title">
+    <section class="catalog-section" id="catalogo" aria-labelledby="catalogo-servicos-title">
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Catálogo de tranças</p>
-          <h2 id="servicos-title">Escolha sua trança por categoria</h2>
+          <p class="eyebrow">Espaço Joyce Campos</p>
+          <h2 id="catalogo-servicos-title">Catálogo do salão</h2>
         </div>
-        <p><span id="result-count">37</span> opções disponíveis</p>
+        <p>Escolha uma categoria para encontrar seu serviço</p>
       </div>
-      <div class="filters" id="category-filters" aria-label="Filtrar serviços">
-        <button class="filter is-active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
-      </div>
-      <div class="services-grid" id="services-grid" aria-live="polite"></div>
-    </section>
 
-    <section class="salon-section" id="servicos-salao" aria-labelledby="salao-title">
-      <div class="section-heading salon-heading">
-        <div>
-          <p class="eyebrow">Além das tranças</p>
-          <h2 id="salao-title">Serviços de salão</h2>
-        </div>
-        <p>Valores organizados por categoria</p>
-      </div>
+      <nav class="catalog-nav" aria-label="Categorias do catálogo">
+        <a href="#tratamentos"><span>01</span>Tratamentos</a>
+        <a href="#escovas"><span>02</span>Escovas</a>
+        <a href="#cortes"><span>03</span>Cortes e penteados</a>
+        <a href="#coloracao"><span>04</span>Coloração</a>
+        <a href="#quimicas"><span>05</span>Químicas</a>
+        <a href="#trancas"><span>06</span>Tranças</a>
+      </nav>
 
       <div class="salon-grid">
-        <article class="salon-card">
+        <article class="salon-card" id="tratamentos">
           <div class="salon-card-heading"><span>01</span><div><p>Saúde dos fios</p><h3>Tratamentos capilares</h3></div></div>
           <p class="service-description">Hidratação, nutrição ou reconstrução conforme a necessidade do cabelo.</p>
           <ul class="price-list">
@@ -81,7 +73,7 @@
           </div>
         </article>
 
-        <article class="salon-card">
+        <article class="salon-card" id="escovas">
           <div class="salon-card-heading"><span>02</span><div><p>Acabamento</p><h3>Escovas e finalização</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Escova<small>Chapinha opcional</small></span><strong>R$ 40</strong></li>
@@ -90,7 +82,7 @@
           </ul>
         </article>
 
-        <article class="salon-card">
+        <article class="salon-card" id="cortes">
           <div class="salon-card-heading"><span>03</span><div><p>Renove o visual</p><h3>Cortes e penteados</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Corte</span><strong>R$ 45</strong></li>
@@ -100,7 +92,7 @@
           </ul>
         </article>
 
-        <article class="salon-card">
+        <article class="salon-card" id="coloracao">
           <div class="salon-card-heading"><span>04</span><div><p>Uma nova cor</p><h3>Coloração</h3></div></div>
           <ul class="price-list price-list-spaced">
             <li><span>Aplicação simples<small>Cliente traz a tinta</small></span><strong>R$ 45</strong></li>
@@ -109,7 +101,7 @@
           <p class="card-note">O valor da coloração do salão varia conforme a quantidade de tubos utilizados.</p>
         </article>
 
-        <article class="salon-card salon-card-wide">
+        <article class="salon-card salon-card-wide" id="quimicas">
           <div class="salon-card-heading"><span>05</span><div><p>Alinhamento e redução de volume</p><h3>Químicas</h3></div></div>
           <div class="chemical-grid">
             <div class="chemical-service">
@@ -143,6 +135,21 @@
           </div>
           <p class="safety-note"><strong>Avaliação necessária:</strong> procedimentos químicos são realizados somente com produtos regularizados pela Anvisa. O valor pode variar conforme o comprimento, o volume e a condição dos fios.</p>
         </article>
+      </div>
+
+      <div class="braids-category" id="trancas">
+        <div class="category-heading">
+          <div>
+            <p class="eyebrow">Categoria 06</p>
+            <h2 id="servicos-title">Tranças</h2>
+            <p class="category-description">Escolha o estilo e use os filtros para encontrar o modelo desejado.</p>
+          </div>
+          <p><span id="result-count">37</span> opções disponíveis</p>
+        </div>
+        <div class="filters" id="category-filters" aria-label="Filtrar tipos de trança">
+          <button class="filter is-active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
+        </div>
+        <div class="services-grid" id="services-grid" aria-live="polite"></div>
       </div>
 
       <div class="salon-cta">

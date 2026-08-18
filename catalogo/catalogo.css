@@ -11,25 +11,27 @@ button,a { -webkit-tap-highlight-color:transparent; }
 .brand strong { display:block; color:var(--gold-light); font-size:1.25rem; line-height:.9; }
 .top-cta { padding:10px 18px; border:1px solid var(--gold); border-radius:999px; color:var(--ink); background:linear-gradient(135deg,var(--gold-light),var(--gold)); font-weight:700; text-decoration:none; }
 main { overflow:hidden; }
-.hero,.catalog-section,.salon-section,.booking { width:min(1180px,calc(100% - 40px)); margin-inline:auto; }
+.hero,.catalog-section,.booking { width:min(1180px,calc(100% - 40px)); margin-inline:auto; }
 .hero { display:grid; grid-template-columns:1.08fr .92fr; gap:clamp(32px,6vw,82px); align-items:center; min-height:610px; padding:80px 0; }
 .eyebrow { margin:0 0 12px; color:var(--gold); font-size:.78rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
 h1,h2 { margin:0; font-family:"Cormorant Garamond",serif; font-weight:600; line-height:.98; }
 h1 { max-width:720px; color:#fff3d2; font-size:clamp(3.15rem,7vw,6.5rem); }
 h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .hero-copy>p:not(.eyebrow) { max-width:650px; margin:24px 0 30px; color:#d6c390; font-size:clamp(1rem,2vw,1.18rem); line-height:1.75; }
-.hero-actions { display:flex; flex-wrap:wrap; gap:12px; }
 .hero-image { position:relative; width:min(100%,470px); justify-self:end; }
 .hero-image::before { content:""; position:absolute; inset:-12px; border:1px solid var(--gold); border-radius:50%; opacity:.65; }
-.hero-image::after { content:"37 estilos"; position:absolute; right:-16px; bottom:8%; display:grid; place-items:center; width:112px; height:112px; border:1px solid var(--gold-light); border-radius:50%; color:var(--ink); background:linear-gradient(135deg,var(--gold-light),var(--gold)); font:700 1.35rem "Cormorant Garamond",serif; text-align:center; transform:rotate(-8deg); }
+.hero-image::after { content:"6 categorias"; position:absolute; right:-16px; bottom:8%; display:grid; place-items:center; width:112px; height:112px; border:1px solid var(--gold-light); border-radius:50%; color:var(--ink); background:linear-gradient(135deg,var(--gold-light),var(--gold)); font:700 1.35rem "Cormorant Garamond",serif; text-align:center; transform:rotate(-8deg); }
 .hero-image img { aspect-ratio:1; width:100%; border-radius:50%; object-fit:cover; filter:saturate(.8) sepia(.08); }
 .button { display:inline-flex; min-height:52px; align-items:center; justify-content:center; padding:0 24px; border-radius:999px; font-weight:700; text-decoration:none; transition:transform .2s ease,box-shadow .2s ease; }
 .button:hover { transform:translateY(-2px); }
 .button-primary { color:var(--ink); background:linear-gradient(135deg,var(--gold-light),var(--gold)); box-shadow:0 12px 34px rgba(201,155,74,.16); }
-.button-secondary { border:1px solid var(--gold); color:var(--gold-light); background:rgba(201,155,74,.04); }
-.catalog-section { padding:70px 0 100px; scroll-margin-top:80px; }
+.catalog-section { padding:70px 0 110px; scroll-margin-top:80px; }
 .section-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; padding-bottom:28px; border-bottom:1px solid var(--line); }
-.section-heading>p { margin:0; color:var(--muted); }
+.section-heading>p { max-width:330px; margin:0; color:var(--muted); line-height:1.55; text-align:right; }
+.catalog-nav { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:28px 0 42px; }
+.catalog-nav a { display:flex; min-height:66px; align-items:center; gap:12px; padding:14px 18px; border:1px solid var(--line); border-radius:16px; color:#e4ce98; background:rgba(201,155,74,.035); font-size:.88rem; font-weight:700; text-decoration:none; transition:border-color .2s ease,background .2s ease,transform .2s ease; }
+.catalog-nav a:hover { border-color:var(--gold-light); background:rgba(201,155,74,.1); transform:translateY(-2px); }
+.catalog-nav span { color:var(--gold); font:600 1.2rem "Cormorant Garamond",serif; }
 #result-count { color:var(--gold-light); font-weight:700; }
 .filters { display:flex; gap:10px; overflow-x:auto; margin:26px -4px 34px; padding:4px 4px 12px; scrollbar-width:thin; scrollbar-color:var(--gold) transparent; }
 .filter { flex:0 0 auto; padding:10px 16px; border:1px solid var(--line); border-radius:999px; color:#d8c394; background:rgba(255,255,255,.025); font:600 .86rem "DM Sans",sans-serif; cursor:pointer; }
@@ -52,10 +54,8 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .card-cta { display:flex; align-items:center; justify-content:space-between; margin-top:auto; padding-top:16px; border-top:1px solid rgba(201,155,74,.18); color:var(--gold-light); font-size:.86rem; font-weight:700; text-decoration:none; }
 .card-cta::after { content:"→"; font-size:1.25rem; transition:transform .2s ease; }
 .card-cta:hover::after { transform:translateX(4px); }
-.salon-section { padding:80px 0 110px; scroll-margin-top:80px; }
-.salon-heading { margin-bottom:34px; }
 .salon-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px; }
-.salon-card { padding:clamp(24px,4vw,38px); border:1px solid var(--line); border-radius:24px; background:linear-gradient(145deg,rgba(27,23,16,.96),rgba(8,8,7,.98)); box-shadow:0 24px 60px rgba(0,0,0,.2); }
+.salon-card { padding:clamp(24px,4vw,38px); border:1px solid var(--line); border-radius:24px; background:linear-gradient(145deg,rgba(27,23,16,.96),rgba(8,8,7,.98)); box-shadow:0 24px 60px rgba(0,0,0,.2); scroll-margin-top:96px; }
 .salon-card-wide { grid-column:1/-1; }
 .salon-card-heading { display:flex; align-items:flex-start; gap:16px; margin-bottom:24px; }
 .salon-card-heading>span { flex:0 0 auto; color:var(--gold); font:600 1.35rem "Cormorant Garamond",serif; }
@@ -81,6 +81,10 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .safe-label { float:right; margin-left:10px; padding:5px 9px; border:1px solid rgba(240,212,138,.45); border-radius:999px; color:var(--gold-light); font-size:.65rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; }
 .safety-note { margin:22px 0 0; padding:17px 19px; border-radius:14px; color:#b7a77f; background:rgba(201,155,74,.07); font-size:.84rem; line-height:1.6; }
 .safety-note strong { color:var(--gold-light); }
+.braids-category { margin-top:80px; padding-top:62px; border-top:1px solid var(--line); scroll-margin-top:80px; }
+.category-heading { display:flex; align-items:end; justify-content:space-between; gap:24px; }
+.category-heading>p { margin:0; color:var(--muted); }
+.category-description { max-width:540px; margin:15px 0 0; color:#baa979; line-height:1.6; }
 .salon-cta { display:flex; align-items:center; justify-content:space-between; gap:30px; margin-top:24px; padding:30px clamp(24px,4vw,40px); border:1px solid var(--line); border-radius:22px; background:radial-gradient(circle at 100% 0,rgba(201,155,74,.14),transparent 55%),#0d0c09; }
 .salon-cta h3 { margin:0; color:#fff3d2; font:600 clamp(1.6rem,3vw,2.35rem)/1.05 "Cormorant Garamond",serif; }
 .salon-cta .button { flex:0 0 auto; }
@@ -115,16 +119,17 @@ noscript { display:block; padding:20px; color:#fff; background:#9b2c2c; text-ali
   .brand span { display:none; }
   .brand img { width:46px; height:46px; }
   .top-cta { padding:9px 15px; }
-  .hero,.catalog-section,.salon-section,.booking { width:min(100% - 28px,1180px); }
+  .hero,.catalog-section,.booking { width:min(100% - 28px,1180px); }
   .hero { gap:50px; padding-top:48px; }
   h1 { font-size:clamp(3rem,15vw,4.8rem); }
   .hero-image::after { right:-8px; width:94px; height:94px; font-size:1.15rem; }
   .catalog-section { padding-top:48px; }
   .section-heading { display:block; }
-  .section-heading>p { margin-top:12px; }
+  .section-heading>p { margin-top:12px; text-align:left; }
+  .catalog-nav { grid-template-columns:1fr 1fr; margin-bottom:30px; }
+  .catalog-nav a { min-height:58px; padding:12px 14px; font-size:.78rem; }
   .services-grid { grid-template-columns:1fr; gap:18px; }
   .service-content { min-height:0; }
-  .salon-section { padding:60px 0 80px; }
   .salon-grid { grid-template-columns:1fr; gap:18px; }
   .salon-card-wide { grid-column:auto; }
   .service-description { margin-left:0; }
@@ -132,6 +137,9 @@ noscript { display:block; padding:20px; color:#fff; background:#9b2c2c; text-ali
   .package-list strong { display:block; margin-top:7px; }
   .salon-cta { align-items:stretch; flex-direction:column; }
   .salon-cta .button { width:100%; }
+  .braids-category { margin-top:60px; padding-top:48px; }
+  .category-heading { display:block; }
+  .category-heading>p { margin-top:14px; }
   .booking { gap:34px; margin-bottom:70px; padding:30px 22px; border-radius:22px; }
   .booking .button { width:100%; }
 }
