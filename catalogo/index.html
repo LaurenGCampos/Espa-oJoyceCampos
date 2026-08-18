@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Catálogo de tranças do Espaço Joyce Campos em Sarapuí, SP. Conheça modelos, valores e agende pelo WhatsApp.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="Catálogo de tranças · Espaço Joyce Campos">
+  <meta property="og:description" content="Escolha seu estilo e agende com a Joyce.">
+  <meta property="og:image" content="https://espaco-joyce-campos.vercel.app/assets/images/og-links.png">
+  <title>Catálogo de tranças · Espaço Joyce Campos</title>
+  <link rel="icon" href="/assets/images/logo-joyce.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./catalogo.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/links/" aria-label="Voltar aos links do Espaço Joyce Campos">
+      <img src="/assets/images/logo-joyce.png" alt="Logo Espaço Joyce Campos" width="52" height="52">
+      <span>Espaço <strong>Joyce Campos</strong></span>
+    </a>
+    <a class="top-cta" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Quero%20agendar%20um%20horário." target="_blank" rel="noopener">Agendar</a>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="catalogo-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Tranças que contam histórias</p>
+        <h1 id="catalogo-title">Encontre o estilo que combina com você.</h1>
+        <p>Conheça os modelos, compare os valores e fale com a Joyce para confirmar cores, materiais e disponibilidade.</p>
+        <a class="button button-primary" href="#servicos">Ver os 37 serviços</a>
+      </div>
+      <div class="hero-image" aria-hidden="true">
+        <img src="/assets/images/catalogo-ai/goddess-m-com-cachos.webp" alt="" width="900" height="900">
+      </div>
+    </section>
+
+    <section class="catalog-section" id="servicos" aria-labelledby="servicos-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Catálogo completo</p>
+          <h2 id="servicos-title">Escolha por categoria</h2>
+        </div>
+        <p><span id="result-count">37</span> opções disponíveis</p>
+      </div>
+      <div class="filters" id="category-filters" aria-label="Filtrar serviços">
+        <button class="filter is-active" type="button" data-category="Todos" aria-pressed="true">Todos</button>
+      </div>
+      <div class="services-grid" id="services-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="booking" id="agendamento" aria-labelledby="booking-title">
+      <div>
+        <p class="eyebrow">Seu horário, do seu jeito</p>
+        <h2 id="booking-title">Como agendar</h2>
+        <p>Escolha o modelo e envie pelo WhatsApp. A Joyce confirma a disponibilidade, o material e o valor final antes do atendimento.</p>
+      </div>
+      <ol class="booking-steps">
+        <li><span>01</span><div><strong>Escolha</strong><p>Toque em “Quero este estilo” no serviço desejado.</p></div></li>
+        <li><span>02</span><div><strong>Combine</strong><p>Informe a data, o tamanho, a cor e envie uma foto do cabelo.</p></div></li>
+        <li><span>03</span><div><strong>Confirme</strong><p>Aguarde a Joyce confirmar o horário e as condições.</p></div></li>
+      </ol>
+      <div class="booking-note">
+        <strong>Importante</strong>
+        <p>As imagens são ilustrativas. Os valores podem variar conforme comprimento, volume, material e personalização.</p>
+      </div>
+      <a class="button button-primary" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20o%20catálogo%20e%20quero%20agendar." target="_blank" rel="noopener">Falar com a Joyce</a>
+    </section>
+  </main>
+
+  <footer>
+    <img src="/assets/images/logo-joyce.png" alt="Espaço Joyce Campos" width="82" height="82">
+    <p>Rua Ernesto Nunes de Proença, 294 · Sarapuí, SP</p>
+    <div class="footer-links">
+      <a href="/links/">Todos os links</a>
+      <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Rua+Ernesto+Nunes+de+Proen%C3%A7a%2C+294%2C+Sarapu%C3%AD%2C+SP" target="_blank" rel="noopener">Como chegar</a>
+      <a href="https://wa.me/5515998483691" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+    <small>© 2026 Espaço Joyce Campos</small>
+  </footer>
+  <noscript>Ative o JavaScript para visualizar os serviços do catálogo.</noscript>
+  <script src="./catalogo.js" defer></script>
+</body>
+</html>
