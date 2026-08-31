@@ -37,9 +37,8 @@ const filters = document.querySelector("#category-filters");
 const resultCount = document.querySelector("#result-count");
 const categories = [...new Set(services.map((service) => service.category))];
 const escapeHtml = (value) => value.replace(/[&<>'"]/g, (character) => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", "'":"&#039;", '"':"&quot;" }[character]));
-const serviceMessage = (service) => encodeURIComponent(`Olá, Joyce! Vi no catálogo o estilo ${service.category} — ${service.name} e gostaria de saber sobre disponibilidade.`);
 
-grid.innerHTML = services.map((service) => `
+grid.innerHTML = services.map((service, index) => `
   <article class="service-card" data-category="${escapeHtml(service.category)}">
     <div class="service-media">
       <img src="/assets/images/catalogo-ai/${service.image}.webp" alt="Imagem ilustrativa: ${escapeHtml(service.category)} ${escapeHtml(service.name)}" width="900" height="900" loading="lazy" decoding="async">
@@ -48,7 +47,17 @@ grid.innerHTML = services.map((service) => `
     <div class="service-content">
       <h3>${escapeHtml(service.name)}</h3>
       <ul class="prices">${service.prices.map(([label, price]) => `<li><span>${escapeHtml(label)}</span><strong>${escapeHtml(price)}</strong></li>`).join("")}</ul>
-      <a class="card-cta" href="https://wa.me/5515998483691?text=${serviceMessage(service)}" target="_blank" rel="noopener">Quero este estilo</a>
+      <div class="service-choice">
+        <label for="escolha-tranca-${index}">Escolha a opção</label>
+        <select id="escolha-tranca-${index}" data-service-choice>
+          <option value="">Selecione uma opção</option>
+          ${service.prices.map(([label, price]) => {
+            const choice = `${service.category} ${service.name} — ${label} — ${price}`;
+            return `<option value="${escapeHtml(choice)}">${escapeHtml(`${label} — ${price}`)}</option>`;
+          }).join("")}
+        </select>
+      </div>
+      <a class="card-cta service-choice-cta" data-service-cta aria-disabled="true" target="_blank" rel="noopener">Escolha uma opção</a>
     </div>
   </article>
 `).join("");
@@ -118,7 +127,7 @@ window.addEventListener("hashchange", () => {
 showCatalogCategory(location.hash.slice(1));
 
 document.querySelectorAll("[data-service-choice]").forEach((select) => {
-  const card = select.closest(".salon-card");
+  const card = select.closest(".salon-card, .service-card");
   const cta = card.querySelector("[data-service-cta]");
 
   const updateServiceChoice = () => {
@@ -131,8 +140,7 @@ document.querySelectorAll("[data-service-choice]").forEach((select) => {
       return;
     }
 
-    const message = `Olá, Joyce! Vi no catálogo e quero o serviço: ${select.dataset.serviceName} — ${choice}. Gostaria de confirmar os detalhes e a disponibilidade.`;
-    cta.href = `https://wa.me/5515998483691?text=${encodeURIComponent(message)}`;
+    cta.href = `https://wa.me/5515998483691?text=${encodeURIComponent(choice)}`;
     cta.removeAttribute("aria-disabled");
     cta.textContent = "Quero este serviço";
   };
