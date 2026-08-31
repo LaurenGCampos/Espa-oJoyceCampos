@@ -78,7 +78,16 @@
             <li><span>Escova + chapinha</span><strong>R$ 50</strong></li>
             <li><span>Escova + babyliss</span><strong>R$ 50</strong></li>
           </ul>
-          <a class="card-cta salon-card-cta" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20no%20catálogo%20os%20serviços%20de%20escova%20e%20finalização%20e%20quero%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Quero este serviço</a>
+          <div class="service-choice">
+            <label for="escolha-escovas">Escolha o procedimento</label>
+            <select id="escolha-escovas" data-service-choice data-service-name="Escovas e finalização">
+              <option value="">Selecione uma opção</option>
+              <option>Escova — R$ 40</option>
+              <option>Escova + chapinha — R$ 50</option>
+              <option>Escova + babyliss — R$ 50</option>
+            </select>
+          </div>
+          <a class="card-cta salon-card-cta service-choice-cta" data-service-cta aria-disabled="true" target="_blank" rel="noopener">Escolha uma opção</a>
         </article>
 
         <article class="salon-card" id="cortes" data-catalog-panel="cortes">
@@ -89,7 +98,17 @@
             <li><span>Escova + corte + hidratação</span><strong>R$ 120</strong></li>
             <li><span>Penteados</span><strong>A partir de R$ 80</strong></li>
           </ul>
-          <a class="card-cta salon-card-cta" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20no%20catálogo%20os%20serviços%20de%20cortes%20e%20penteados%20e%20quero%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Quero este serviço</a>
+          <div class="service-choice">
+            <label for="escolha-cortes">Escolha o procedimento</label>
+            <select id="escolha-cortes" data-service-choice data-service-name="Cortes e penteados">
+              <option value="">Selecione uma opção</option>
+              <option>Corte — R$ 45</option>
+              <option>Escova + corte — R$ 75</option>
+              <option>Escova + corte + hidratação — R$ 120</option>
+              <option>Penteados — a partir de R$ 80</option>
+            </select>
+          </div>
+          <a class="card-cta salon-card-cta service-choice-cta" data-service-cta aria-disabled="true" target="_blank" rel="noopener">Escolha uma opção</a>
         </article>
 
         <article class="salon-card" id="coloracao" data-catalog-panel="coloracao">
@@ -98,7 +117,15 @@
             <li><span>Aplicação simples<small>Cliente traz a coloração</small></span><strong>R$ 45</strong></li>
             <li><span>Com a coloração do salão</span><strong>A partir de R$ 90</strong></li>
           </ul>
-          <a class="card-cta salon-card-cta" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20no%20catálogo%20os%20serviços%20de%20coloração%20e%20quero%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Quero este serviço</a>
+          <div class="service-choice">
+            <label for="escolha-coloracao">Escolha o procedimento</label>
+            <select id="escolha-coloracao" data-service-choice data-service-name="Coloração">
+              <option value="">Selecione uma opção</option>
+              <option>Aplicação simples (cliente traz a coloração) — R$ 45</option>
+              <option>Com a coloração do salão — a partir de R$ 90</option>
+            </select>
+          </div>
+          <a class="card-cta salon-card-cta service-choice-cta" data-service-cta aria-disabled="true" target="_blank" rel="noopener">Escolha uma opção</a>
         </article>
 
         <article class="salon-card salon-card-wide" id="quimicas" data-catalog-panel="quimicas">
@@ -134,7 +161,31 @@
               </ul>
             </div>
           </div>
-          <a class="card-cta salon-card-cta" href="https://wa.me/5515998483691?text=Olá%2C%20Joyce!%20Vi%20no%20catálogo%20os%20serviços%20químicos%20e%20quero%20saber%20sobre%20disponibilidade." target="_blank" rel="noopener">Quero este serviço</a>
+          <div class="service-choice">
+            <label for="escolha-quimicas">Escolha a química e o comprimento</label>
+            <select id="escolha-quimicas" data-service-choice data-service-name="Químicas">
+              <option value="">Selecione uma opção</option>
+              <optgroup label="Definitiva — sem formol">
+                <option>Definitiva (sem formol) — curto — R$ 150</option>
+                <option>Definitiva (sem formol) — médio — R$ 180</option>
+                <option>Definitiva (sem formol) — longo — R$ 230</option>
+                <option>Definitiva (sem formol) — extra longo — R$ 280</option>
+              </optgroup>
+              <optgroup label="Botox capilar">
+                <option>Botox capilar — curto — R$ 70</option>
+                <option>Botox capilar — médio — R$ 80</option>
+                <option>Botox capilar — longo — R$ 90</option>
+                <option>Botox capilar — extra longo — R$ 100</option>
+              </optgroup>
+              <optgroup label="Progressiva — com formol">
+                <option>Progressiva (com formol) — curto — R$ 150</option>
+                <option>Progressiva (com formol) — médio — R$ 180</option>
+                <option>Progressiva (com formol) — longo — R$ 230</option>
+                <option>Progressiva (com formol) — extra longo — R$ 280</option>
+              </optgroup>
+            </select>
+          </div>
+          <a class="card-cta salon-card-cta service-choice-cta" data-service-cta aria-disabled="true" target="_blank" rel="noopener">Escolha uma opção</a>
         </article>
       </div>
 

@@ -73,6 +73,14 @@ h2 { color:#fff3d2; font-size:clamp(2.4rem,5vw,4rem); }
 .price-list small { display:block; margin-top:3px; color:#877a5c; font-size:.72rem; }
 .price-list-spaced { gap:18px; }
 .salon-card-cta { margin-top:auto; padding-top:24px; }
+.service-choice { margin-top:auto; padding-top:24px; }
+.service-choice label { display:block; margin-bottom:8px; color:#baa979; font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+.service-choice select { width:100%; min-height:48px; padding:0 42px 0 14px; border:1px solid rgba(201,155,74,.35); border-radius:12px; color:#fff0ca; background:#0c0b08; font:inherit; cursor:pointer; }
+.service-choice select:focus { border-color:var(--gold-light); outline:2px solid rgba(240,212,138,.18); outline-offset:2px; }
+.service-choice select option,.service-choice select optgroup { color:#fff0ca; background:#0c0b08; }
+.service-choice-cta { margin-top:16px; }
+.service-choice-cta[aria-disabled="true"] { color:#807251; cursor:not-allowed; }
+.service-choice-cta[aria-disabled="true"]::after { opacity:.45; }
 .chemical-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
 .chemical-service { position:relative; padding:24px; border:1px solid rgba(201,155,74,.2); border-radius:18px; background:rgba(0,0,0,.2); }
 .chemical-service h4 { margin:0 0 20px; color:#fff0ca; font:600 1.55rem "Cormorant Garamond",serif; }

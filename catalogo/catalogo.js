@@ -116,3 +116,32 @@ window.addEventListener("hashchange", () => {
 });
 
 showCatalogCategory(location.hash.slice(1));
+
+document.querySelectorAll("[data-service-choice]").forEach((select) => {
+  const card = select.closest(".salon-card");
+  const cta = card.querySelector("[data-service-cta]");
+
+  const updateServiceChoice = () => {
+    const choice = select.value;
+
+    if (!choice) {
+      cta.removeAttribute("href");
+      cta.setAttribute("aria-disabled", "true");
+      cta.textContent = "Escolha uma opção";
+      return;
+    }
+
+    const message = `Olá, Joyce! Vi no catálogo e quero o serviço: ${select.dataset.serviceName} — ${choice}. Gostaria de confirmar os detalhes e a disponibilidade.`;
+    cta.href = `https://wa.me/5515998483691?text=${encodeURIComponent(message)}`;
+    cta.removeAttribute("aria-disabled");
+    cta.textContent = "Quero este serviço";
+  };
+
+  select.addEventListener("change", updateServiceChoice);
+  cta.addEventListener("click", (event) => {
+    if (cta.getAttribute("aria-disabled") !== "true") return;
+    event.preventDefault();
+    select.focus();
+  });
+  updateServiceChoice();
+});
