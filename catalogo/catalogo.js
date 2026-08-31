@@ -140,7 +140,8 @@ document.querySelectorAll("[data-service-choice]").forEach((select) => {
       return;
     }
 
-    cta.href = `https://wa.me/5515998483691?text=${encodeURIComponent(choice)}`;
+    const message = `Olá, Joyce! Tudo bem? Vi no catálogo do Espaço Joyce Campos e tenho interesse em: ${choice}. Poderia me informar os detalhes e a disponibilidade, por favor?`;
+    cta.href = `https://wa.me/5515998483691?text=${encodeURIComponent(message)}`;
     cta.removeAttribute("aria-disabled");
     cta.textContent = "Quero este serviço";
   };
