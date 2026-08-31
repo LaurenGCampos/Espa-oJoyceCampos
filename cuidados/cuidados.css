@@ -1,4 +1,3 @@
-.care-jump-links { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:30px; }
 .care-section { scroll-margin-top:82px; }
 .care-list { display:grid; gap:14px; }
 .care-list-two-columns { grid-template-columns:repeat(2,minmax(0,1fr)); align-items:start; }
@@ -17,7 +16,6 @@
 .care-content li::marker { color:var(--gold); }
 @media (max-width:860px) { .care-list-two-columns { grid-template-columns:1fr; } }
 @media (max-width:620px) {
-  .care-jump-links .btn { width:100%; }
   .care-category summary { min-height:82px; padding:18px; }
   .care-content { padding:20px 20px 22px; }
 }
