@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="description" content="Confira os dias disponíveis em novembro e dezembro de 2026 no Espaço Joyce Campos.">
+  <title>Agenda · Espaço Joyce Campos</title>
+  <link rel="icon" href="../assets/images/logo-joyce.png">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../catalog-pages.css">
+  <link rel="stylesheet" href="agenda.css">
+  <script src="config.js" defer></script>
+  <script src="agenda.js" defer></script>
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="../"><img src="../assets/images/logo-joyce.png" alt="Logo Espaço Joyce Campos" width="52" height="52"><span>Espaço <strong>Joyce Campos</strong></span></a><a class="top-cta" href="../catalogo/">Catálogo</a></header>
+  <main class="container agenda-main">
+    <p class="eyebrow">Planeje seu próximo cuidado</p>
+    <h1>Agenda de <em>fim de ano</em></h1>
+    <p class="lead">Confira os dias disponíveis e fale com a Joyce para combinar seu atendimento.</p>
+    <ul class="legend" aria-label="Legenda do calendário"><li class="available">Disponível</li><li class="busy">Ocupado</li><li class="unknown">A confirmar</li></ul>
+    <p id="agenda-message" role="status" aria-live="polite">Consultando a agenda…</p>
+    <button type="button" id="refresh" class="agenda-button">Atualizar agenda</button>
+    <div id="calendars" class="calendars" aria-label="Calendários de novembro e dezembro de 2026"></div>
+    <p class="agenda-note">A disponibilidade pode mudar. O agendamento é confirmado diretamente com a Joyce pelo WhatsApp.</p>
+    <a class="top-cta whatsapp" href="https://wa.me/5515998483691?text=Ol%C3%A1%2C%20Joyce!%20Vi%20a%20agenda%20e%20quero%20combinar%20um%20dia%20para%20meu%20atendimento." target="_blank" rel="noopener">Consultar pelo WhatsApp</a>
+    <details id="admin" class="admin">
+      <summary>Área da Joyce</summary>
+      <form id="login-form">
+        <p>Entre para marcar os dias da agenda.</p>
+        <label for="email">E-mail</label><input id="email" type="email" autocomplete="username" required>
+        <label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required>
+        <button type="submit" class="agenda-button">Entrar</button>
+      </form>
+      <div id="editor" hidden>
+        <p>Toque em um dia, escolha a disponibilidade e salve. As clientes verão a alteração ao atualizar a agenda.</p>
+        <form id="day-form" hidden>
+          <h2 id="selected-day"></h2>
+          <label for="day-status">Disponibilidade</label>
+          <select id="day-status"><option value="available">Disponível</option><option value="busy">Ocupado</option><option value="unknown">A confirmar</option></select>
+          <button type="submit" class="agenda-button">Salvar dia</button>
+        </form>
+        <details><summary>Trocar minha senha</summary>
+          <form id="password-form">
+            <label for="new-password">Nova senha (pelo menos 12 caracteres)</label>
+            <input id="new-password" type="password" autocomplete="new-password" minlength="12" required>
+            <label for="confirm-password">Repita a nova senha</label>
+            <input id="confirm-password" type="password" autocomplete="new-password" minlength="12" required>
+            <button type="submit" class="agenda-button">Trocar senha</button>
+          </form>
+        </details>
+        <button id="logout" type="button" class="agenda-button">Sair</button>
+      </div>
+      <p id="admin-message" role="status" aria-live="polite"></p>
+    </details>
+    <noscript>Ative o JavaScript para consultar o calendário ou fale com a Joyce pelo WhatsApp.</noscript>
+  </main>
+</body>
+</html>

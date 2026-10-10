@@ -1,0 +1,32 @@
+.agenda-main { max-width:1000px; padding-block:64px; }
+.agenda-main h1 { margin-left:0; }
+.agenda-main .lead { margin-left:0; }
+.legend { display:flex; flex-wrap:wrap; gap:12px 24px; list-style:none; padding:0; margin:28px 0 14px; }
+.legend li::before { content:""; display:inline-block; width:12px; height:12px; margin-right:8px; border-radius:50%; background:#746952; }
+.legend .available::before { background:#8bcc9b; }
+.legend .busy::before { background:#e7a7a0; }
+.calendars { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:24px; }
+.month { padding:24px 16px; border:1px solid var(--line); border-radius:22px; background:var(--panel); }
+.month h2 { font-size:2rem; text-align:center; }
+.month table { width:100%; table-layout:fixed; border-spacing:5px; }
+.month th { font-size:.75rem; color:var(--muted); font-weight:500; }
+.month td { height:52px; text-align:center; vertical-align:middle; }
+.day { width:100%; min-height:48px; display:grid; place-content:center; gap:2px; border-radius:10px; border:1px solid #746952; background:#242017; color:#dbcdb0; font:600 1rem "DM Sans",sans-serif; }
+.day.available { background:#172b1e; color:#b3e2bd; border-color:#668d70; }
+.day.busy { background:#321e1d; color:#efb8b1; border-color:#a36d68; }
+.day small { font-size:.65rem; font-weight:400; }
+button.day { cursor:pointer; }
+button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline:3px solid var(--gold-light); outline-offset:3px; }
+.agenda-button { min-height:44px; padding:10px 18px; border:1px solid var(--gold); border-radius:12px; background:#201a10; color:var(--cream); font:600 .95rem "DM Sans",sans-serif; cursor:pointer; }
+.agenda-button:disabled { opacity:.55; cursor:wait; }
+.agenda-note { margin-top:24px; color:var(--muted); }
+.whatsapp { display:inline-block; }
+.admin { margin-top:48px; border-top:1px solid var(--line); padding-top:20px; }
+.admin summary { cursor:pointer; color:var(--muted); }
+.admin form { max-width:420px; margin-block:24px; }
+.admin label { display:block; margin-bottom:6px; }
+.admin input, .admin select { width:100%; min-height:48px; margin-bottom:16px; padding:12px; color:var(--cream); background:var(--panel); border:1px solid var(--line); border-radius:10px; font:inherit; }
+.admin h2 { font-size:1.7rem; }
+[hidden] { display:none !important; }
+@media (max-width:700px) { .calendars { grid-template-columns:1fr; } .agenda-main { padding-block:40px; } }
+@media (max-width:360px) { .month { padding-inline:8px; } .month table { border-spacing:3px; } .day small { font-size:.58rem; } }

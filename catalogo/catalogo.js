@@ -51,7 +51,7 @@ grid.innerHTML = services.map((service, index) => `
         <label for="escolha-tranca-${index}">Escolha a opção</label>
         <select id="escolha-tranca-${index}" data-service-choice>
           <option value="">Selecione uma opção</option>
-          ${service.prices.map(([label, price]) => {
+          ${service.prices.filter(([label]) => label !== "Acessórios").map(([label, price]) => {
             const choice = `${service.category} ${service.name} — ${label} — ${price}`;
             return `<option value="${escapeHtml(choice)}">${escapeHtml(`${label} — ${price}`)}</option>`;
           }).join("")}
