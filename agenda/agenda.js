@@ -15,6 +15,9 @@
   let loading = false;
   let saving = false;
   let changingPassword = false;
+  let lastActivity = 0;
+  let refreshInFlight = null;
+  const idleLimit = 15 * 60 * 1000;
   const finance = window.createJoyceFinance({ request, refreshSession, getSession: () => session });
 
   async function request(path, options = {}) {
@@ -93,6 +96,7 @@
       const user = await request("/auth/v1/user", { headers: { Authorization: `Bearer ${result.access_token}` } });
       if (user.app_metadata?.agenda_editor !== true) throw new Error("unauthorized");
       session = result;
+      lastActivity = Date.now();
       session.expires_at = Math.floor(Date.now() / 1000) + session.expires_in;
       loginForm.reset();
       loginForm.hidden = true;
@@ -108,10 +112,18 @@
 
   async function refreshSession() {
     if (!session) throw new Error("401");
-    if (session.expires_at * 1000 < Date.now() + 60000) {
-      session = await request("/auth/v1/token?grant_type=refresh_token", { method: "POST", body: JSON.stringify({ refresh_token: session.refresh_token }) });
-      session.expires_at = Math.floor(Date.now() / 1000) + session.expires_in;
-    }
+    if (session.expires_at * 1000 >= Date.now() + 60000) return;
+    if (refreshInFlight?.session === session) return refreshInFlight.promise;
+    const originalSession = session;
+    const refresh = (async () => {
+      const renewed = await request("/auth/v1/token?grant_type=refresh_token", { method: "POST", body: JSON.stringify({ refresh_token: originalSession.refresh_token }) });
+      if (session !== originalSession) throw new Error("401");
+      renewed.expires_at = Math.floor(Date.now() / 1000) + renewed.expires_in;
+      session = renewed;
+    })();
+    refreshInFlight = { session: originalSession, promise: refresh };
+    try { await refresh; }
+    finally { if (refreshInFlight?.promise === refresh) refreshInFlight = null; }
   }
 
   calendars.addEventListener("click", event => {
@@ -178,8 +190,21 @@
     const token = session?.access_token;
     logout();
     adminMessage.textContent = "Você saiu da área de edição.";
-    if (token) { try { await request("/auth/v1/logout", { method: "POST", headers: { Authorization: `Bearer ${token}` } }); } catch { /* A sessão local já foi removida. */ } }
+    if (token) { try { await request("/auth/v1/logout?scope=local", { method: "POST", headers: { Authorization: `Bearer ${token}` } }); } catch { /* A sessão local já foi removida. */ } }
   });
+  ["pointerdown", "keydown", "input"].forEach(name => document.addEventListener(name, () => {
+    if (session) lastActivity = Date.now();
+  }, { passive: true }));
+  function checkIdleSession() {
+    if (!session || Date.now() - lastActivity < idleLimit) return;
+    const token = session.access_token;
+    logout();
+    adminMessage.textContent = "Sua área foi bloqueada após 15 minutos sem uso. Entre novamente para continuar.";
+    request("/auth/v1/logout?scope=local", { method: "POST", headers: { Authorization: `Bearer ${token}` } }).catch(() => {});
+  }
+  setInterval(checkIdleSession, 30000);
+  document.addEventListener("visibilitychange", checkIdleSession);
+  window.addEventListener("pagehide", () => { if (session) logout(); });
   document.querySelector("#refresh").addEventListener("click", load);
   document.addEventListener("visibilitychange", () => { if (!document.hidden) load(); });
   setInterval(() => { if (!document.hidden) load(); }, 60000);

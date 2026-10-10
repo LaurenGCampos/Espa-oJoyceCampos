@@ -1,5 +1,20 @@
 # Agenda do Espaço Joyce Campos
 
+## Proteções adicionais
+
+O `vercel.json` aplica proteção contra incorporação em outros sites,
+interpretação incorreta de arquivos e permissões desnecessárias do navegador.
+A agenda usa uma política de conteúdo que permite apenas os scripts do site,
+fontes do Google e conexões com o projeto Supabase autorizado, sem cache.
+
+A Área da Joyce bloqueia o acesso local após 15 minutos sem interação e
+limpa dados ao sair ou navegar para outra página. Uma resposta atrasada de
+renovação do token não pode reabrir uma sessão já encerrada.
+
+Essas medidas não substituem autenticação em duas etapas nas contas que
+administram GitHub, Vercel e Supabase; o titular precisa concluir a
+configuração de seu autenticador nos respectivos painéis.
+
 ## Entradas de dinheiro
 
 Após entrar na Área da Joyce, o controle financeiro permite registrar data,
