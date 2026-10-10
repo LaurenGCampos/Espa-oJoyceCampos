@@ -19,7 +19,7 @@
     <p class="eyebrow">Planeje seu próximo cuidado</p>
     <h1>Agenda de <em>fim de ano</em></h1>
     <p class="lead">Confira os dias disponíveis e fale com a Joyce para combinar seu atendimento.</p>
-    <ul class="legend" aria-label="Legenda do calendário"><li class="available">Disponível</li><li class="busy">Ocupado</li><li class="unknown">A confirmar</li></ul>
+    <ul class="legend" aria-label="Legenda do calendário"><li class="available">Disponível</li><li class="busy">Ocupado</li><li class="off">Folga</li><li class="unknown">A confirmar</li></ul>
     <p id="agenda-message" role="status" aria-live="polite">Consultando a agenda…</p>
     <button type="button" id="refresh" class="agenda-button">Atualizar agenda</button>
     <div id="calendars" class="calendars" aria-label="Calendários de novembro e dezembro de 2026"></div>
@@ -38,7 +38,7 @@
         <form id="day-form" hidden>
           <h2 id="selected-day"></h2>
           <label for="day-status">Disponibilidade</label>
-          <select id="day-status"><option value="available">Disponível</option><option value="busy">Ocupado</option><option value="unknown">A confirmar</option></select>
+          <select id="day-status"><option value="available">Disponível</option><option value="busy">Ocupado</option><option value="off">Folga</option><option value="unknown">A confirmar</option></select>
           <button type="submit" class="agenda-button">Salvar dia</button>
         </form>
         <details><summary>Trocar minha senha</summary>

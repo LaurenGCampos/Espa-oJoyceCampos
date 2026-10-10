@@ -4,7 +4,8 @@
 .legend { display:flex; flex-wrap:wrap; gap:12px 24px; list-style:none; padding:0; margin:28px 0 14px; }
 .legend li::before { content:""; display:inline-block; width:12px; height:12px; margin-right:8px; border-radius:50%; background:#746952; }
 .legend .available::before { background:#8bcc9b; }
-.legend .busy::before { background:#e7a7a0; }
+.legend .busy::before { background:#f5d34f; }
+.legend .off::before { background:#f16b6b; }
 .calendars { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:24px; margin-top:24px; }
 .month { padding:24px 16px; border:1px solid var(--line); border-radius:22px; background:var(--panel); }
 .month h2 { font-size:2rem; text-align:center; }
@@ -13,7 +14,8 @@
 .month td { height:52px; text-align:center; vertical-align:middle; }
 .day { width:100%; min-height:48px; display:grid; place-content:center; gap:2px; border-radius:10px; border:1px solid #746952; background:#242017; color:#dbcdb0; font:600 1rem "DM Sans",sans-serif; }
 .day.available { background:#172b1e; color:#b3e2bd; border-color:#668d70; }
-.day.busy { background:#321e1d; color:#efb8b1; border-color:#a36d68; }
+.day.busy { background:#3b3212; color:#ffe477; border-color:#d2b43f; }
+.day.off { background:#3b1717; color:#ffabab; border-color:#e26767; }
 .day small { font-size:.65rem; font-weight:400; }
 button.day { cursor:pointer; }
 button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible { outline:3px solid var(--gold-light); outline-offset:3px; }

@@ -1,8 +1,8 @@
 (() => {
   const config = window.AGENDA_CONFIG || {};
   const ready = Boolean(config.url && config.publishableKey);
-  const labels = { available: "Disponível", busy: "Ocupado", unknown: "A confirmar" };
-  const shortLabels = { available: "Livre", busy: "Ocup.", unknown: "—" };
+  const labels = { available: "Disponível", busy: "Ocupado", off: "Folga", unknown: "A confirmar" };
+  const shortLabels = { available: "Livre", busy: "Ocup.", off: "Folga", unknown: "—" };
   const months = [{ month: 10, name: "Novembro" }, { month: 11, name: "Dezembro" }];
   const message = document.querySelector("#agenda-message");
   const adminMessage = document.querySelector("#admin-message");

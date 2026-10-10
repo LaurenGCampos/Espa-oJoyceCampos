@@ -2,7 +2,8 @@
 
 Calendários públicos de novembro e dezembro de 2026 em `/agenda/`.
 Os dias começam como `unknown` (A confirmar). A área da Joyce permite marcar
-`available` (Disponível) ou `busy` (Ocupado) e trocar a senha.
+`available` (Disponível, verde), `busy` (Ocupado, amarelo) ou `off` (Folga,
+vermelho) e trocar a senha.
 
 Os dados estão no projeto Supabase `sqpywbchnirianmtqkix`, tabela
 `public.agenda_days`. A migração remota `create_agenda_days` cria a tabela,
