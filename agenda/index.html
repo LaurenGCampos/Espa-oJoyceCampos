@@ -10,7 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../catalog-pages.css">
   <link rel="stylesheet" href="agenda.css">
+  <link rel="stylesheet" href="finance.css">
   <script src="config.js" defer></script>
+  <script src="finance-model.js" defer></script>
+  <script src="finance.js" defer></script>
   <script src="agenda.js" defer></script>
 </head>
 <body>
@@ -28,12 +31,30 @@
     <details id="admin" class="admin">
       <summary>Área da Joyce</summary>
       <form id="login-form">
-        <p>Entre para marcar os dias da agenda.</p>
+        <p>Entre para gerenciar a agenda e as entradas dos atendimentos.</p>
         <label for="email">E-mail</label><input id="email" type="email" autocomplete="username" required>
         <label for="password">Senha</label><input id="password" type="password" autocomplete="current-password" required>
         <button type="submit" class="agenda-button">Entrar</button>
       </form>
       <div id="editor" hidden>
+        <nav class="admin-shortcuts" aria-label="Gerenciar o salão"><a class="agenda-button" href="#finance">Entradas de dinheiro</a><a class="agenda-button" href="#calendars">Marcar dias na agenda</a></nav>
+        <section id="finance" class="finance" aria-labelledby="finance-title">
+          <p class="eyebrow">Controle dos atendimentos</p>
+          <h2 id="finance-title">Entradas de dinheiro</h2>
+          <p>Registre cada valor recebido pelo serviço feito. Escolha o mês para acompanhar seus totais.</p>
+          <form id="receipt-form">
+            <h3 id="receipt-form-title">Registrar entrada</h3>
+            <label for="receipt-date">Data do atendimento / recebimento</label><input id="receipt-date" type="date" required>
+            <label for="receipt-service">Serviço feito</label><input id="receipt-service" type="text" maxlength="160" placeholder="Ex.: Nagô masculina" required>
+            <label for="receipt-amount">Valor recebido (R$)</label><input id="receipt-amount" type="text" inputmode="decimal" placeholder="Ex.: 150,00" maxlength="20" required>
+            <div class="finance-actions"><button type="submit" class="agenda-button">Salvar entrada</button><button id="receipt-cancel" type="button" class="agenda-button" hidden>Cancelar edição</button></div>
+          </form>
+          <p id="receipt-message" role="status" aria-live="polite"></p>
+          <div class="finance-filters"><div><label for="receipt-month">Consultar mês</label><input id="receipt-month" type="month" required></div><button id="receipt-refresh" class="agenda-button" type="button">Atualizar entradas</button></div>
+          <div class="finance-summary"><div><span>Total recebido no mês</span><strong id="receipt-total">—</strong></div><div><span>Entradas registradas</span><strong id="receipt-count">—</strong></div></div>
+          <p id="finance-message" role="status" aria-live="polite"></p>
+          <div id="receipt-list"></div>
+        </section>
         <p>Toque em um dia, escolha a disponibilidade e salve. As clientes verão a alteração ao atualizar a agenda.</p>
         <form id="day-form" hidden>
           <h2 id="selected-day"></h2>

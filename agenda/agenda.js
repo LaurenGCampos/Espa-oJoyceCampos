@@ -15,6 +15,7 @@
   let loading = false;
   let saving = false;
   let changingPassword = false;
+  const finance = window.createJoyceFinance({ request, refreshSession, getSession: () => session });
 
   async function request(path, options = {}) {
     const response = await fetch(`${config.url}${path}`, {
@@ -71,6 +72,7 @@
 
   function logout() {
     session = null;
+    finance.clear();
     selected = null;
     loginForm.hidden = false;
     document.querySelector("#editor").hidden = true;
@@ -97,6 +99,7 @@
       document.querySelector("#editor").hidden = false;
       adminMessage.textContent = "Você entrou. Toque no dia que deseja marcar.";
       render();
+      finance.start();
     } catch {
       document.querySelector("#password").value = "";
       adminMessage.textContent = "Não foi possível entrar. Confira seu e-mail, sua senha e a conexão.";
