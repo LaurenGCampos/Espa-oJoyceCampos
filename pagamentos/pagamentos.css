@@ -1,0 +1,11 @@
+.payment-section { padding-top:0; }
+.payment-policy { max-width:850px; margin:0 auto 64px; padding:clamp(24px,5vw,48px); border:2px solid var(--gold); border-radius:24px; background:linear-gradient(135deg,#292011,#12100c); text-align:center; }
+.payment-policy h2 { font-size:clamp(2.5rem,6vw,4rem); color:var(--gold-light); }
+.payment-policy p { max-width:650px; margin-inline:auto; font-size:1.1rem; }
+.payment-policy .payment-thanks { margin-bottom:0; color:var(--muted); font-size:.95rem; }
+.payment-methods { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:20px; }
+.payment-methods .card { text-align:center; }
+.payment-symbol { display:block; margin-bottom:20px; color:var(--gold-light); font-size:2rem; font-weight:600; }
+.payment-contact { margin:36px auto 0; text-align:center; }
+@media (max-width:800px) { .payment-methods { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:440px) { .payment-methods { grid-template-columns:1fr; } }
