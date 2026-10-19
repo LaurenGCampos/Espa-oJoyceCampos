@@ -1,5 +1,5 @@
 const services = [
-  { category:"Nagô", name:"Masculina", image:"nago-masculina", prices:[["Simples","R$ 100"],["Com alimentação de jumbo","R$ 130"],["Acessórios","+ R$ 5"]] },
+  { category:"Nagô", name:"Masculina", image:"nago-masculina", prices:[["Simples","R$ 100"],["Com alimentação de jumbo","R$ 150"],["Acessórios","+ R$ 5"]] },
   { category:"Nagô", name:"Tiara", image:"nago-tiara", prices:[["Simples","R$ 50"],["Com alimentação de jumbo","R$ 100"],["Acessórios","+ R$ 5"]] },
   { category:"Nagô", name:"Lateral", image:"nago-lateral", prices:[["Até 4 tranças","R$ 40"],["Mais de 4 tranças","R$ 65"],["Acessórios","+ R$ 5"]] },
   { category:"Nagô", name:"Topo", image:"nago-topo", prices:[["Até 4 tranças","R$ 40"],["Mais de 4 tranças","R$ 65"],["Acessórios","+ R$ 5"]] },
