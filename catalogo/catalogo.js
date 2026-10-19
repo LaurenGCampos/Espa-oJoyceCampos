@@ -5,7 +5,7 @@ const services = [
   { category:"Nagô", name:"Topo", image:"nago-topo", prices:[["Até 4 tranças","R$ 40"],["Mais de 4 tranças","R$ 65"],["Acessórios","+ R$ 5"]] },
   { category:"Boxeadora", name:"Com cachos", image:"boxeadora-com-cachos", prices:[["Simples","R$ 200"],["Acessórios","+ R$ 5"]] },
   { category:"Boxeadora", name:"Cachos na ponta", image:"boxeadora-cachos-na-ponta", prices:[["Simples","R$ 150"],["Anéis ou pingentes","+ R$ 5"]] },
-  { category:"Boxeadora", name:"Alimentada", image:"boxeadora-alimentada", prices:[["Simples","R$ 150"],["Mais 4 tranças","A combinar"],["Acessórios","+ R$ 5"]] },
+  { category:"Boxeadora", name:"Alimentada", image:"boxeadora-alimentada", prices:[["Simples","R$ 120"],["Mais 4 tranças","A combinar"],["Acessórios","+ R$ 5"]] },
   { category:"Boxeadora", name:"Simples", image:"boxeadora-simples", prices:[["Tradicional","R$ 70"],["Acessórios","+ R$ 5"]] },
   { category:"Ghana Braids", name:"Com cachos", image:"ghana-com-cachos", prices:[["Mão de obra","R$ 200"],["Mão de obra + material","R$ 270"],["Anéis ou pingentes","+ R$ 5"]] },
   { category:"Ghana Braids", name:"Cachos na ponta", image:"ghana-cachos-na-ponta", prices:[["Mão de obra","R$ 200"],["Mão de obra + material","R$ 230"],["Anéis ou pingentes","+ R$ 5"]] },
